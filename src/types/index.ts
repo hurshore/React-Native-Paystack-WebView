@@ -12,19 +12,14 @@ interface SuccessResponse extends Response {
 }
 
 interface CustomFieldProps {
-  display_name: string,
-  variable_name: string,
-  value: string
+  display_name: string;
+  variable_name: string;
+  value: string;
 }
 
 interface metadataProps {
-  custom_fields: CustomFieldProps[];
-  transactionType: 'PRODUCT_KEY' | 'SUBSCRIPTION';
-  phone: string;
-  planID: string;
-  email: string;
-  firstName: string;
-  lastName: string;
+  custom_fields?: CustomFieldProps[];
+  [key: string]: any;
 }
 
 export interface PayStackProps {
