@@ -14,13 +14,8 @@ interface CustomFieldProps {
     value: string;
 }
 interface metadataProps {
-    custom_fields: CustomFieldProps[];
-    transactionType: 'PRODUCT_KEY' | 'SUBSCRIPTION';
-    phone: string;
-    planID: string;
-    email: string;
-    firstName: string;
-    lastName: string;
+    custom_fields?: CustomFieldProps[];
+    [key: string]: any;
 }
 export interface PayStackProps {
     paystackKey: string;
