@@ -3,7 +3,7 @@ require 'json'
 package = JSON.parse(File.read(File.join(__dir__, 'package.json')))
 
 Pod::Spec.new do |s|
-  s.name         = package['name']
+  s.name         = "react-native-paystack-webview"
   s.version      = package['version']
   s.summary      = package['description']
   s.license      = package['license']
@@ -12,7 +12,7 @@ Pod::Spec.new do |s|
   s.homepage     = package['homepage']
   s.platform     = :ios, "10.0"
 
-  s.source       = { :git => "git+https://github.com/just1and0/React-Native-Paystack-WebView.git", :tag => "v#{s.version}" }
+  s.source       = { :git => "git+https://github.com/hurshore/React-Native-Paystack-WebView.git", :tag => "v#{s.version}" }
   s.source_files  = "ios/**/*.{h,m,swift}"
 
   s.dependency 'React'
