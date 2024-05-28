@@ -64,11 +64,3 @@ export const getAmountValueInKobo = (amount: AmountValue): number => {
   }
   return 0;
 };
-
-export const getChannels = (channelsArrary: PaymentChannels[]) => {
-  if (channelsArrary?.length > 0) {
-    const channelsString = JSON.stringify(channelsArrary);
-    return `channels: ${channelsString},`;
-  }
-  return '';
-};

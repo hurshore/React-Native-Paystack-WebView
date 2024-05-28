@@ -1,8 +1,8 @@
-import * as React from 'react'
+import * as React from 'react';
 import { useState, useEffect, forwardRef, useRef, useImperativeHandle } from 'react';
 import { Modal, View, ActivityIndicator, SafeAreaView } from 'react-native';
 import { WebView, WebViewNavigation } from 'react-native-webview';
-import { getAmountValueInKobo, getChannels } from './helper';
+import { getAmountValueInKobo } from './helper';
 import { PayStackProps, PayStackRef } from './types';
 
 const CLOSE_URL = 'https://standard.paystack.co/close';
@@ -16,7 +16,6 @@ const Paystack: React.ForwardRefRenderFunction<React.ReactNode, PayStackProps> =
     firstName,
     amount = '0.00',
     currency = 'NGN',
-    channels = ['card'],
     refNumber,
     billingName,
     metadata,
@@ -79,7 +78,6 @@ const Paystack: React.ForwardRefRenderFunction<React.ReactNode, PayStackProps> =
                 phone: '${phone}',
                 amount: ${getAmountValueInKobo(amount)}, 
                 currency: '${currency}',
-                ${getChannels(channels)}
                 ${refNumberString}
                 ${subAccountString}
                 metadata: ${JSON.stringify(metadata)},
@@ -165,7 +163,3 @@ const Paystack: React.ForwardRefRenderFunction<React.ReactNode, PayStackProps> =
 };
 
 export default forwardRef(Paystack);
-
-
-
-

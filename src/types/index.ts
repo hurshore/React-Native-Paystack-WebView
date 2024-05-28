@@ -30,7 +30,6 @@ export interface PayStackProps {
   phone?: string | number;
   amount: string | number;
   currency?: Currency;
-  channels?: PaymentChannels[];
   refNumber?: string;
   billingName?: string;
   metadata?: metadataProps;
